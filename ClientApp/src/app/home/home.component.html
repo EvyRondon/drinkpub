@@ -1,0 +1,22 @@
+<table *ngIf="People && People.length > 0">
+  <thead>
+    <tr class="header-list">
+      <th class="header-list-th">Posição</th>
+      <th class="header-list-th">Nome</th>
+      <th class="header-list-th">Documento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of People; index as i; count as total;" class="body-list">
+      <td class="body-header-td">{{i+1}}</td>
+      <td class="body-header-td">{{person.name}}</td>
+      <td class="body-header-td">{{person.document}}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Quantidade</td>
+      <td>{{total}}</td>
+    </tr>
+  </tfoot>
+</table>
